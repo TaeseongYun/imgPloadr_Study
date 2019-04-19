@@ -1,13 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/
-    bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/
-    font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="/public/css/style.css">
     <title>imgPloadr.io</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/public/css/styles.css">
 </head>
 
 <body>
@@ -21,22 +19,22 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
-                {{ body }}
+                {{{body}}}
             </div>
             <div class="col-sm-4">
                 {{> stats this }}
+
                 {{> popular this }}
+
                 {{> comments this }}
             </div>
         </div>
     </div>
-    <div style="border-top: soild 1px #eee; padding-top: 1em">
+    <div style="border-top: solid 1px #eee; padding-top: 1em;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <p class="text-muted">imgPloadr.io | &copy; Copyright 2018, All Rights
-                        Reserved
-                    </p>
+                    <p class="text-muted">imgPloadr.io | &copy; Copyright 2014, All Rights Reserved</p>
                     <p class="text-center">
                         <i class="fa fa-twitter-square fa-2x text-primary"></i>
                         <i class="fa fa-facebook-square fa-2x text-primary"></i>
@@ -46,7 +44,7 @@
         </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript" src="/public/js/script.js"></script>
+    <script type="text/javascript" src="/public/js/scripts.js"></script>
 </body>
 
 </html>

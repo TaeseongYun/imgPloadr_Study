@@ -6,7 +6,7 @@ const path = require("path"),
   cookieParser = require("cookie-parser"),
   morgan = require("morgan"),
   methodOverride = require("method-override"),
-  exphbs = require("express-handlebars")
+  errorHandler = require("errorhandler")
 
 module.exports = app => {
   app.use(morgan("dev"))

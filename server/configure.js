@@ -19,5 +19,14 @@ module.exports = app => {
   if ("development" === app.get("env")) {
     app.use(errorHandler())
   }
+  app.engine(
+    "handlebars",
+    exphbs.create({
+      defaultLayout: "main",
+      layoutsDir: app.get("views") + "/layout",
+      partialsDir: [app.get("views") + "/partials"]
+    }).engine
+  )
+  app.set("view engine", "handlebars")
   return app
 }

@@ -7,21 +7,19 @@ const path = require("path"),
   morgan = require("morgan"),
   methodOverride = require("method-override"),
   errorHandler = require("errorhandler"),
-  moment = require("moment")
+  moment = require("moment"),
+  multer = require("multer")
 
 module.exports = app => {
   app.use(morgan("dev"))
   app.use(bodyParser.json())
-  app.use(
-    bodyParser({
-      uploadDir: path.join(__dirname, "public/upload/temp")
-    })
-  )
+  app.use(multer({ dest: path.join(__dirname, "public/upload/temp") }).any())
   app.use(bodyParser.urlencoded({ extended: true }))
   app.use(cookieParser("some-secret-value-here"))
   app.use(methodOverride())
   routes(app)
-  app.use("/public", express.static(path.join(__dirname, "../public")))
+
+  app.use("/public/", express.static(path.join(__dirname, "../public")))
   if ("development" === app.get("env")) {
     app.use(errorHandler())
   }

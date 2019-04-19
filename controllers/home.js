@@ -1,5 +1,50 @@
+const sidebar = require("../helpers/sidebar")
+
+const viewModel = {
+  images: [
+    {
+      uniqueId: 1,
+      title: "Sample Image1",
+      description: "",
+      filename: "sample1.jpg",
+      views: 0,
+      likes: 0,
+      timestamp: Date.now
+    },
+    {
+      uniqueId: 2,
+      title: "Sample Image2",
+      description: "",
+      filename: "sample2.jpg",
+      views: 0,
+      likes: 0,
+      timestamp: Date.now
+    },
+    {
+      uniqueId: 3,
+      title: "Sample Image3",
+      description: "",
+      filename: "sample3.jpg",
+      views: 0,
+      likes: 0,
+      timestamp: Date.now
+    },
+    {
+      uniqueId: 4,
+      title: "Sample Image4",
+      description: "",
+      filename: "sample4.jpg",
+      views: 0,
+      likes: 0,
+      timestamp: Date.now
+    }
+  ]
+}
+
 module.exports = {
   index: (req, res) => {
-    res.render("index")
+    sidebar(viewModel, viewModel => {
+      res.render("index", viewModel)
+    })
   }
 }

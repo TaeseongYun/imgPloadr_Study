@@ -1,2 +1,6 @@
 /node_modules
 package-lock.json
+
+
+# Mongoose DB PASSWORD 내포
+.env

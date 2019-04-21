@@ -1,12 +1,12 @@
-const sidebar = require("../helpers/sidebar"),
-  ImageModel = require("../model").Image
-
-const viewModel = {
-  images: []
-}
+const sidebar = require("../helpers/sidebar")
+const ImageModel = require("../models").Image
 
 module.exports = {
   index: (req, res) => {
+    const viewModel = {
+      images: []
+    }
+
     ImageModel.find({}, {}, { sort: { timestamp: -1 } }, (err, images) => {
       if (err) throw err
 
